@@ -17,6 +17,7 @@ RUN tar -xvzf  go${GOLANG_VERSION}.linux-arm64.tar.gz -C /golang-bin
 ENV PATH $PATH:/golang-bin/go/bin
 #RUN go install github.com/gruntwork-io/terratest/modules/terraform@latest github.com/stretchr/testify/assert@latest
 WORKDIR /app
-COPY . ./main.go
+COPY ./main.go ./main.go
 RUN go mod init ibk/terratest
 RUN go mod tidy
+ENV GOOS 'linux'

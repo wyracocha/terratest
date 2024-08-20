@@ -8,7 +8,7 @@ jobs:
     env:
       DOCKER_HOST: "dockerhub"
       DOCKER_PAT: ${{ secrets.DOCKERHUB_PAT }}
-      DOCKER_USER: ${{ secrets.DOCKER_USER }}
+      DOCKER_USER: ${{ secrets.DOCKERHUB_USER }}
     runs-on: ubuntu-latest
     steps:
     - name: Checkout repository

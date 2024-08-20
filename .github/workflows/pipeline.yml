@@ -3,12 +3,12 @@ on:
   push:
     branches: 
     - master
-env:
-  DOCKER_HOST: "dockerhub"
-  DOCKER_PAT: ${{ secrets.DOCKERHUB_PAT }}
-  DOCKER_USER: ${{ secrets.DOCKER_USER }}
 jobs:
   build:
+    env:
+      DOCKER_HOST: "dockerhub"
+      DOCKER_PAT: ${{ secrets.DOCKERHUB_PAT }}
+      DOCKER_USER: ${{ secrets.DOCKER_USER }}
     runs-on: ubuntu-latest
     steps:
     - name: Checkout repository

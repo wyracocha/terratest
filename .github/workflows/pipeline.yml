@@ -4,7 +4,7 @@ on:
     branches: 
     - master
 env:
-  DOCKER_HOST: ""
+  DOCKER_HOST: "dockerhub"
   DOCKER_PAT: ${{ secrets.DOCKERHUB_PAT }}
   DOCKER_USER: ${{ secrets.DOCKER_USER }}
 jobs:

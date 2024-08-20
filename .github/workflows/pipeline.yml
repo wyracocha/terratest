@@ -7,6 +7,7 @@ jobs:
   build:
     env:
       DOCKER_USER: ${{ secrets.DOCKERHUB_USER }}
+      REPO_NAME: ${{ github.event.repository.name }}
     runs-on: ubuntu-latest
     steps:
     - name: Checkout repository
@@ -14,6 +15,7 @@ jobs:
     - name: docker build
       run: make build_image
   push:
+    needs: build
     env:
       DOCKER_PAT: ${{ secrets.DOCKERHUB_PAT }}
       DOCKER_USER: ${{ secrets.DOCKERHUB_USER }}

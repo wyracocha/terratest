@@ -16,6 +16,6 @@ script_docker_build () {
 
 script_docker_push () {
     script_docker_login
-    docker push -a $DOCKER_USER
+    docker push -a $DOCKER_USER/$REPO_NAME
 }
 "$@"

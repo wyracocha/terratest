@@ -11,6 +11,8 @@ script_docker_login () {
 script_docker_build () {
     script_get_version
     echo $DOCKER_HOST
+    echo $DOCKER_USER
+    echo $TAG
     docker build -t $DOCKER_HOST/$DOCKER_USER:$TAG
     docker build -t $DOCKER_HOST/$DOCKER_USER:latest
 }

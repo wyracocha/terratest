@@ -6,7 +6,7 @@ on:
 jobs:
   build:
     env:
-      DOCKER_HOST: "dockerhub"
+      DOCKER_HOST: "index.docker.io/v1"
       DOCKER_PAT: ${{ secrets.DOCKERHUB_PAT }}
       DOCKER_USER: ${{ secrets.DOCKERHUB_USER }}
     runs-on: ubuntu-latest

@@ -6,5 +6,19 @@ You can use this image to try  terratest.
 ```
 docker run --rm -v $PWD:/app -w /app devildeveloper/terratest go test -v
 ```
+## Content
+You can run commands from terraform, opentofu or golang:
+```
+docker run --rm -v $PWD:/app -w /app devildeveloper/terratest terraform
+```
+
+```
+docker run --rm -v $PWD:/app -w /app devildeveloper/terratest go
+```
+
+```
+docker run --rm -v $PWD:/app -w /app devildeveloper/terratest tofu
+```
+
 ## ROADMAP
 - install terratest library 

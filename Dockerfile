@@ -10,3 +10,14 @@ RUN mkdir /terraform-bin
 RUN  unzip terraform_${TERRAFORM_VERSION}_linux_arm.zip -d /terraform-bin 
 ENV PATH $PATH:/terraform-bin
 RUN rm -rf terraform_${TERRAFORM_VERSION}_linux_arm.zip
+
+# install tofu
+# Download the installer script:
+RUN	wget --secure-protocol=TLSv1_2 --https-only https://get.opentofu.org/install-opentofu.sh -O install-opentofu.sh
+	# Give it execution permissions:
+RUN chmod +x install-opentofu.sh
+	# Please inspect the downloaded script
+	# Run the installer:
+RUN ./install-opentofu.sh --install-method apk
+	# Remove the installer:
+RUN rm -f install-opentofu.sh

@@ -1,5 +1,5 @@
 # Golang Terraform
-This repository supports terraform and golang. Designed to work with terraform  1.9.4 and golang 1.23.0.
+This repository supports terraform, opentofu and golang. Designed to work with terraform  1.9.4 and golang 1.23.0.
 You can use this image to try  terratest. 
 ## How to
 ```

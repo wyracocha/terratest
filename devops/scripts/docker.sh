@@ -10,12 +10,12 @@ script_docker_login () {
 
 script_docker_build () {
     script_get_version
-    docker build -t $DOCKER_USER/$REPO_NAME:latest .
-    docker build -t $DOCKER_USER/$REPO_NAME:$TAG .
+    docker build -t $DOCKERHUB_REPO_OWNER/$REPO_NAME:latest .
+    docker build -t $DOCKERHUB_REPO_OWNER/$REPO_NAME:$TAG .
 }
 
 script_docker_push () {
     script_docker_login
-    docker push -a $DOCKER_USER/$REPO_NAME
+    docker push -a $DOCKERHUB_REPO_OWNER/$REPO_NAME
 }
 "$@"

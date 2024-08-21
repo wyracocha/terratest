@@ -10,8 +10,8 @@ script_docker_login () {
 
 script_docker_build () {
     script_get_version
-    docker build -t $DOCKER_USER/$REPO_NAME:$TAG .
     docker build -t $DOCKER_USER/$REPO_NAME:latest .
+    docker build -t $DOCKER_USER/$REPO_NAME:$TAG .
 }
 
 script_docker_push () {

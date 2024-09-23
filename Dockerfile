@@ -21,3 +21,8 @@ RUN chmod +x install-opentofu.sh
 RUN ./install-opentofu.sh --install-method apk
 	# Remove the installer:
 RUN rm -f install-opentofu.sh
+
+# Terratest tools
+RUN wget -O /usr/local/bin/terratest_log_parser https://github.com/gruntwork-io/terratest/releases/download/v0.13.13/terratest_log_parser_linux_amd64
+# Make the downloaded binary executable
+RUN chmod +x /usr/local/bin/terratest_log_parser
